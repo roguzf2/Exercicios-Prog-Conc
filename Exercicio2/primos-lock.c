@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
       return 1;
    }
    nthreads = atoi(argv[1]);
-   n_valores = atoi(argv[2]);
+   n_valores = atoll(argv[2]);
 
    //--aloca as estruturas
    tid = (pthread_t*) malloc(sizeof(pthread_t)*nthreads);
