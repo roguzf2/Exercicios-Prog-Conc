@@ -34,16 +34,6 @@ import sys
 
 try:
     df = pd.read_csv('$csv_file')
-    lista_media_total = []
-    total = df['Total']
-    media_acumulada = 0
-    for i in range(len(total)):
-        media_acumulada += total[i]
-        if (i + 1) % 10 == 0:
-            media_acumulada += total[i]
-            lista_media_total.append(media_acumulada)
-            media_acumulada = 0
-    print(lista_media_total)
     df.to_excel('primos_results_10e3.xlsx', index=False)
     print('\nArquivo XLSX gerado com sucesso: primos_results_10e3.xlsx')
 except Exception as e:
